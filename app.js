@@ -83,16 +83,13 @@ sayWorld();
 // ------------------------------------------
 // Q7 メソッド
 // ------------------------------------------
-const user = {
-  ...user,
-  birthday: '2000-09-27',
-  sayHello() {
-    console.log('Hello！');
-  }
+user.birthday = '2000-09-27';
+
+user.sayHello = function() {
+  console.log('Hello！');
 };
 
 user.sayHello();
-
 
 // ------------------------------------------
 // Q8 引数
