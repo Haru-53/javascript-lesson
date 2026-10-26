@@ -59,9 +59,13 @@ console.log(playerList[1].favorites[1]);
 // ------------------------------------------
 // Q5 四則演算
 // ------------------------------------------
-console.log((playerList[0].age + playerList[1].age + playerList[2].age) / 3);
+let totalAge = 0;
 
+for (let i = 0; i < playerList.length; i++) {
+  totalAge += playerList[i].age; 
+}
 
+console.log(totalAge / playerList.length);
 // ------------------------------------------
 // Q6 関数
 // ------------------------------------------
@@ -79,16 +83,13 @@ sayWorld();
 // ------------------------------------------
 // Q7 メソッド
 // ------------------------------------------
-const updatedUser = {
-  ...user,
-  birthday: '2000-09-27',
-  sayHello() {
-    console.log('Hello！');
-  }
+user.birthday = '2000-09-27';
+
+user.sayHello = function() {
+  console.log('Hello！');
 };
 
-updatedUser.sayHello();
-
+user.sayHello();
 
 // ------------------------------------------
 // Q8 引数
